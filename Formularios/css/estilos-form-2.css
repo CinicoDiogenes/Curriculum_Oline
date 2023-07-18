@@ -1,0 +1,132 @@
+
+* {
+    font-family: ' Calibri', 'Trebuchet MS', sans-serif;
+}
+
+.backGroundImg {
+    /* width: 100vw;
+    height: 100vh; */
+    background-image: url(/media/mulher-vitruvi.jpg);
+    background-size: 100%;
+}
+
+
+
+body {
+    margin: 0.5em;
+    background-color: rgba(0, 255, 255, 0.212);
+}
+
+header,
+footer {
+    margin: 1rem;
+    padding: 2px;
+    border-radius: 20px;
+    box-sizing: border-box;
+    background-color: cadetblue;
+    text-align: center;
+    color: white;
+}
+
+aside {
+    background-color: bisque;
+    box-sizing: border-box;
+    border-radius: 20px;
+    padding: 0.5px;
+    margin: 0.7rem;
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+    /* position: fixed;
+    top: 0;
+    right: 0;
+    width: 170px;
+    height: 640px; */
+
+
+}
+
+h2,
+h3 {
+    text-align: center;
+
+}
+
+section {
+    padding: 1.5px;
+    margin: 1rem;
+    box-sizing: border-box;
+    display: block;
+    border: 3px solid rgba(0, 128, 0, 0.493);
+    border-radius: 20px;
+    /* box-shadow: 0.2rem 0.2rem 0.4rem; */
+}
+
+#changePassword p {
+    position: relative;
+    bottom: 16px;
+    left: 500px;
+}
+
+#registerUser p {
+    position: relative;
+    top: 155px;
+    right: -7px;
+
+}
+
+#faq a {
+    text-decoration: none;
+    color: white;
+}
+
+
+
+form label,
+form input,
+form button {
+    width: 100%;
+    border-radius: 20px;
+    padding: 0.4rem 0.5rem;
+    box-sizing: border-box;
+}
+
+form input {
+    background-color: rgba(255, 255, 255, 0.808);
+}
+
+#btnSubmit:hover {
+    background-color: greenyellow;
+
+}
+
+#btnSubmit:active {
+    background-color: violet;
+}
+
+.noregistrado {
+    color: grey;
+}
+
+.error {
+    color: darkred;
+    font-weight: 900;
+}
+
+.correcto {
+    color: darkgreen;
+    text-transform: capitalize;
+    font-weight: 900;
+}
+
+
+
+@media screen and (min-width: 700px) {
+    .fila {
+        display: flex;
+    }
+
+    .columna {
+        flex: 1;
+    }
+
+}

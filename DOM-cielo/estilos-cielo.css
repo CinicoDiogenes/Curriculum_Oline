@@ -1,0 +1,231 @@
+body {
+    margin: 0;
+}
+#cielo {
+    width: 100vw;
+    height: 100vh;
+    background-image: url(fondo-nubes.png);
+    background-repeat: repeat-x;
+    background-position: left bottom;
+    background-color: #06b5ff;
+    animation-name: fondo-cielo;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    /* para las nubes */
+    position: relative;
+    overflow: hidden;
+}
+@keyframes fondo-cielo {
+    from {
+        background-position: 0px bottom ;
+    }
+    to {
+        background-position: 960px bottom;
+    }
+}
+
+.nube {
+    height: 194px;
+    width: 281px;
+    background: url(nube.png) no-repeat center center/contain;
+    position: absolute;
+    top:0;
+    left:-281px;
+}
+
+#nube1 {
+    transform: scale(0.3);
+    opacity: 0.5;
+    animation: animacion-nube-1 8s linear infinite;
+}
+@keyframes animacion-nube-1 {
+    0% {
+        top:30%;
+        left:-281px;
+    }
+    100% {
+        top:30%;
+        left: 100%;
+    }
+}
+
+#nube2 {
+    animation: animacion-nube-2 7s linear infinite;
+}
+@keyframes animacion-nube-2 {
+    0% {
+        transform: scale(0.8);
+        opacity: 0.8;
+        top:0;
+        left: -281px;
+    }
+    33% {
+        transform: scale(0.4);
+        opacity: 0.4;
+        top:80%;
+    }
+    66% {
+        transform: scale(0.8);
+        opacity: 0.8;
+        top:0;
+    }
+    100% {
+        transform: scale(0.4);
+        opacity: 0.4;
+        top:80%;
+        left: 100%;
+    }
+}
+
+#nube3 {
+    animation: animacion-nube-2 9s linear 3s infinite;
+}
+@keyframes animacion-nube-3 {
+    0% {
+        transform: scale(0.4);
+        opacity: 0.4;
+        top:60%;
+        left: -281px;
+    }
+    33% {
+        transform: scale(0.8);
+        opacity: 0.8;
+        top:0%;
+    }
+    66% {
+        transform: scale(0.4);
+        opacity: 0.4;
+        top:60%;
+    }
+    100% {
+        transform: scale(0.8);
+        opacity: 0.8;
+        top:0;
+        left: 100%;
+    }
+}
+
+.avion {
+    height: 194px;
+    width: 281px;
+    background: url(avion.png) no-repeat center center/contain;
+    position: absolute;
+    top: 0;
+    right: -281px;
+}
+
+#avion1 {
+    animation: animacion-avion-1 5s cubic-bezier(.56,1.7,.48,-0.6) infinite;
+}
+@keyframes animacion-avion-1 {
+    0% {
+        top: 100%;
+        right: -281px;
+        transform: scale(0.5) rotate(45deg);
+    }
+    100% {
+        top: 0;
+        right: 100%;
+        transform: scale(1) rotate(0deg);
+    }
+}
+
+#looping {
+    height: 100%;
+    width: 0;
+    position: absolute;
+    /*border: 1px solid red;*/
+    top:0;
+    right: 50%;
+    animation: animacion-looping 10s linear infinite;
+}
+#avion2 {
+    top:auto;
+    bottom: 0;
+}
+@keyframes animacion-looping {
+    0% {
+        right: 0;
+    }
+    25% {
+        right: 50%;
+        transform: rotate(0);
+    }
+    75% {
+        right: 50%;
+        transform: rotate(360deg);
+    }
+    100% {
+        right: calc(100% + 281px);
+        transform: rotate(360deg);
+    }
+}
+
+#avion3 {
+    height: 100%;
+    background-position-y: bottom;
+    /*-border: 4px solid red;*/
+    animation: animacion-avion-3 10s linear 3s infinite;
+    transform-origin: left center;
+}
+@keyframes animacion-avion-3 {
+    0% {
+        left: 100%;
+    }
+    25% {
+        left: 50%;
+        transform: rotate(0);
+    }
+    75% {
+        left: 50%;
+        transform: rotate(360deg);
+    }
+    100% {
+        left: -281px;
+        transform: rotate(360deg);
+    }
+}
+#avion4 {    
+    top: auto;
+    bottom: 0;
+    transform-origin: left calc(-50vh + 194px);
+    animation: animacion-avion-3 10s linear 6s infinite;
+}
+
+
+/* BUTTONS */
+
+#botones {
+    position: absolute;
+    padding: 0.5rem;
+    background-color: rgba(255, 255, 255, 0.507);
+    top: 60px;
+    right: 0;
+    
+}
+
+#botones button {
+    display: inline-block;
+    border: 4px solid navy;
+    padding: 5px;
+    background-color: blue;
+    color: wheat;
+    font-weight: bold;
+    font-family: monospace;
+    font-size: 1.2rem;
+    cursor: pointer;
+
+}
+
+#botones button:hover {
+    background-color: aqua;
+}
+
+#botones button:active{
+    background-color: blueviolet;
+}
+
+#botones button.pausado {
+    opacity: 0.5;
+}

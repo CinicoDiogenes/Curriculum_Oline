@@ -1,0 +1,431 @@
+/*Import de tipografia*/
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital@1&family=Permanent+Marker&family=Roboto+Slab&display=swap');
+/*Import de tipografia*/
+
+
+/*ESTILOS PARA LAS RECETAS */
+
+/* BOX MODEL */
+
+body {
+    margin: 1rem 3rem 1rem;
+    /*Modelador de las margenes/bord*/
+
+
+}
+
+header {
+    border: 1px solid green;
+    padding: 1.5rem;
+}
+
+header h2 {
+    margin-top: 0;
+}
+
+header p {
+    margin-bottom: 0;
+}
+
+nav {
+    border: 3px double darkgreen;
+    margin-bottom: 2rem;
+    margin-top: 2rem;
+}
+
+/*maneras de indentificar o selecionar las etiquetas especificas que queira modificar, y las que queira no incluirselas */
+nav:not(#menu-principal) ul,
+nav+nav #menu-superior>nav:nth-of-type(2),
+/* El caracter ">" es para indetificar la estiqueta q es la hija de la respectiva*/
+hr {
+    border-color: goldenrod;
+}
+
+nav ul {
+    margin: 1;
+    padding: 1;
+
+}
+
+figure {
+    margin: auto;
+    /*margin auto auto la dara la definicion precisa mientras ha dado un porcentaje a width.*/
+    /*width: 50%;*/
+}
+
+figure img {
+    width: 100%;
+    border-radius: 0.5rem;
+}
+
+hr {
+    border-style: dotted;
+    border-width: 0.5rem 0 0 0;
+    margin: 3rem auto;
+    width: 80%;
+}
+
+nav ul {
+    display: flex;
+    /*
+        flex-direction: row;
+        justify-content: space-evenly; /* justfy content sirve para aliñar los elementos en el eje de la pantalla */
+    /*height: 150px;
+        align-items: center; /* para que align intens funcine, tiene que ser dado una altura primero, y eso se hace con el "height" */
+
+}
+
+nav li {
+    /*display: inline-block;*/
+    /*Eso hace que etiquetas de bloque se convirtan en liena, o al revez. inline y inline-block*/
+    margin: 0 2rem;
+    flex: 1;
+
+}
+
+nav a {
+    display: block;
+    border: 1px solid orangered;
+    padding: 0.5rem;
+}
+
+/*FLOAT*/
+
+.flotar-izq {
+    float: left;
+    width: 30%;
+    /*Todos los elementos que flotan, tiene sugerido venir con el "width"*/
+    margin-right: 0.5rem;
+}
+
+.flotar-der {
+    float: right;
+    width: 30%;
+    margin-left: 0.5rem;
+}
+
+.no-flotar {
+    clear: both;
+}
+
+/* FLEXBOX */
+
+.fila {
+    display: flex;
+}
+
+.columna-1 {
+    flex: 2;
+}
+
+.columna-2 {
+    flex: 1;
+}
+
+#nut dl {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#nut dt,
+#nut dd {
+    margin-left: 0;
+    flex: 33.33%;
+    border: 1px solid silver;
+    box-sizing: border-box;
+    /* El box sizing se pude jugar con las anchuras y alturas cuando se suman las medidas */
+    padding: 6px;
+}
+
+
+#nut2 dl {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#nut2 dt,
+#nut2 dd {
+    margin-left: 0;
+    flex: 33.33%;
+    border: 1px solid silver;
+    box-sizing: border-box;
+    /* El box sizing se pude jugar con las anchuras y alturas cuando se suman las medidas */
+    padding: 6px;
+}
+
+/*Detalles del formato visual*/
+
+p {
+    line-height: 2;
+}
+
+/*LISTAS*/
+
+ol {
+    list-style-type: upper-alpha;
+}
+
+ol ol {
+    list-style-type: lower-alpha;
+}
+
+nav ul {
+    list-style-type: none;
+}
+
+#ing ul {
+    /*Funcio para dar imagen a los puntitos de las listas que vienen por defecto. utilizar imagenes en PNG*/
+    list-style-image: url(../Imagenes/cutlery-icono-min.png);
+}
+
+aside ul {
+    list-style-image: url(../Imagenes/cutlery-icono-min.png);
+}
+
+#ing > ul {
+    list-style-image: none;
+    list-style-type: disc;
+}
+
+#menu-superior ul a {
+    list-style-image: url(../Imagenes/cutlery-icono-min.png);
+    list-style-position: inside;
+    display: list-item;
+}
+
+/*Colores*/
+
+body {
+    background-color: #FCE4BD;
+    color: #1d2524;
+}
+
+header,
+footer {
+    background-color: #2c4e48;
+    color: #FCE4BD;
+}
+
+aside {
+    background-color: #FFB196;
+    color: #1d2524;
+    border: #23e2bf;
+}
+
+#menu-superior nav#menu-principal {
+    border-color: green;
+}
+
+#menu-superior nav#menu-principal a {
+    border-color: #FFB196;
+    background-color: #FFB196;
+    color: #1d2524;
+    border-color: #2c4e48;
+}
+
+#menu-superior nav#menu-principal a:hover {
+    border-color: aquamarine;
+    background-color: aquamarine;
+
+}
+
+#menu-superior nav:last-child a {
+    border-color: #FFB196;
+}
+
+#menu-superior nav:last-child a {
+    border-color: #FFB196;
+    background-color: #FFB196;
+}
+
+#menu-superior nav:last-child a:hover {
+    border-color: #4e362e;
+    background-color: #4e362e;
+    color: #FCE4BD;
+
+}
+
+article h1,
+article h3 {
+    background: linear-gradient(#D9DB8A00 40%,
+            #D9DB8AFF 80%,
+            #96B886);
+    padding: 1rem;
+}
+
+figure {
+    position: relative;
+}
+
+figcaption {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #FCE4bD7F;
+    padding: 0.5rem;
+    color: #4e362e;
+}
+
+/*Imagenes de fondo*/
+
+aside {
+    /* background-image: url(../Imagenes/abuela.gif);
+        background-attachment: scroll;
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: contain; - o igual podemos simplifcar el codigo de la seguinte manera que se lo ve abajo:*/
+    background: #FFB196 url(../Imagenes/abuela.gif) scroll no-repeat center center/contain;
+    /*La imagen de la abuela*/
+}
+
+nav {
+    box-shadow: -5px -5px 5px #0000007c;
+
+}
+
+figcaption {
+    box-shadow: -5px -5px 5px #0000007c;
+}
+
+
+/*TIPOGRAFIAS*/
+
+body {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+
+}
+
+
+@font-face {
+    font-family: myFirstFont-André;
+    src: url(Tipografia-Mac.woff);
+}
+
+/* header {
+
+        font-family: myFirstFont-André, sans-serif;
+        text-transform: uppercase;
+        letter-spacing: 0.2rem; 
+} */
+
+
+
+body {
+    font-family: 'serif', Roboto Slab;
+    font-size: 18px;
+}
+
+h1,
+h2,
+h3 {
+    font-family: 'Merriweather', cursive;
+    text-align: center;
+    letter-spacing: 0.5px;
+}
+
+h1 {
+    font-size: 45px;
+}
+
+h2 {
+    font-size: 60px;
+}
+
+h3 {
+    font-size: 30px;
+}
+
+h4 {
+    font-family: 'Merriweather', cursive;
+    font-size: 15px;
+    text-align: center;
+    text-decoration: underline;
+
+}
+
+.carbonell {
+    color: white;
+    background-color: red;
+    font-weight: bold;
+    display: inline-block;
+    padding: 1px;
+    border-radius: 6px;
+}
+
+.borges {
+    color: white;
+    background-color: green;
+    font-weight: bold;
+    display: inline;
+    padding: 1px;
+    border-radius: 6px;
+    color: black;
+}
+
+header,
+footer,
+nav a {
+    text-align: center;
+}
+
+a {
+    text-decoration: none;
+}
+
+footer {
+    text-align: center;
+}
+
+#subir {
+
+    position: fixed;
+    bottom: 1rem;
+    right: 0.7rem;
+
+}
+
+footer {
+    text-align: center;
+}
+
+@media screen and (max-width: 1096px) {
+    nav:not(#menu-principal) ul {
+        display: block;
+    }  
+
+}
+
+@media screen and (max-width: 900px) {
+    nav#menu-principal ul,
+    .fila {
+        display: block;
+    }    
+
+
+.flotar-der,
+.flotar-izq {
+    float: none;
+    width: auto;
+    margin: auto 0;
+       
+}
+
+    h2 {
+        font-size: 30px;
+    }
+
+}
+
+@media screen and (max-width:555px) {
+    #nut dl {
+        display: block;
+    }
+
+    #nut dt {
+        font-weight: bold;
+        background-color: #00000029;
+    }
+    
+}
+    

@@ -1,0 +1,83 @@
+@import url('https://fonts.googleapis.com/css2?family=Alegreya+Sans:ital,wght@1,100;1,300&family=Nunito+Sans:wght@600&family=Open+Sans:ital,wght@0,400;1,300;1,500;1,700;1,800&display=swap');
+
+* {
+  font-family: 'Nunito Sans', sans-serif;
+}
+
+body {
+  margin: 2px;
+  background-color: #dfdfdd;
+  color: #202020;
+  text-align: center;
+}
+
+header a {
+    text-decoration: none;
+    color: white;
+}
+
+header i:hover {
+    background-color: rgba(127, 255, 212, 0.288);
+    
+}
+
+
+
+.destacado {
+  padding: 1rem;
+  color: #dfdfdd;
+  background-color: #202020;
+ 
+  
+}
+
+.contenido {
+  padding: 1rem 1rem;
+  background-color: white;   
+  
+}
+
+article {
+margin: 0.8rem 1rem;
+border: 3px solid black;
+border-radius: 40px;
+overflow: hidden;
+}
+
+h1, h2, h3, footer{
+margin: 0.8rem 1rem;
+padding: 0.5rem;
+box-sizing: border-box;
+border: 1px solid black;
+background-color: rgba(128, 128, 128, 0.452);
+border-radius: 40px;
+
+}
+h2:hover{
+cursor: pointer;
+background-color: aquamarine;
+}
+
+h1, footer {
+padding: 1rem;
+color: #dfdfdd;
+background-color: #202020;
+}
+
+h4 {
+font-weight: 900;
+
+}
+
+input, textarea {
+width: 50%;
+
+}
+
+input:hover{
+background-color: aquamarine;
+width: 25%;
+
+}
+
+

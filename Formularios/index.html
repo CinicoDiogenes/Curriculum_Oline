@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estilos-form-1.css">
+    <title>Formulario 1</title>
+
+    
+</head>
+<body>
+    <header>
+        <h1>Acceso de usuarios</h1>
+    </header>   
+
+    <main class="fila">        
+        <section class="columna">
+            <h2>Formulario de acceso</h2>
+            <form id="formAcceso" action=""  method="post">
+                <p>
+                    <label for="usuario">USUARIO:</label>
+                    <input type="text" id="usuario" placeholder="Introduce tu usuario" required>
+                </p>
+                <p>
+                    <label for="clave">CONTRASEÑA:</label>
+                    <input type="password"  id="clave" required>
+                </p>
+                <p>
+                    <button type="submit" id="btnSubmit">ACCEDER</button>
+                </p>
+            </form>
+        </section>
+
+        <section class="columna">
+            <h2>Area Usuario</h2>
+            <div id="avisoUsuarios">
+
+                <p class="noregistrado">Usuario no registrado</p>
+
+            </div>
+        </section>
+    </main>
+    <!--Área para JAVASCRIPT-->
+    <script src="js-form-1.js"></script>
+    
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>El vuelo del intrépido</title>
+
+    <link rel="stylesheet" href="estilos-cielo.css">
+</head>
+
+<body>
+    <div id="cielo">
+        <div class="nube" id="nube1"></div>
+        <div class="nube" id="nube2"></div>
+        <div class="nube" id="nube3"></div>
+        <div class="avion" id="avion1"></div>
+        <div id="looping">
+            <div class="avion" id="avion2"></div>
+        </div>
+        <div class="avion" id="avion3"></div>
+        <div class="avion" id="avion4"></div>
+        <div id="botones" style="animation-play-state:paused;">
+            <button type="button" data-idavion="avion1" class="botones">Avión 1</button>
+            <button type="button" data-idavion="looping" class="botones">Avión 2</button>
+            <button type="button" data-idavion="avion3" class="botones">Avión 3</button>
+            <button type="button" data-idavion="avion4" class="botones">Avión 4</button>
+        </div>
+    </div>
+
+    <script src="jquery/jquery-3.7.0.min.js"></script>
+    <script src="funciones-cielo-js.js"></script>
+</body>
+
+</html>
